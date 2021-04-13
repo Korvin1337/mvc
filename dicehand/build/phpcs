@@ -1,0 +1,35 @@
+
+FILE: ...win64\home\Korvin1337\dbwebb-kurser\mvc\me\game\dicehand\src\Dice\Dice.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 27 | ERROR | [x] Space before opening parenthesis of function call prohibited
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+
+FILE: ...4\home\Korvin1337\dbwebb-kurser\mvc\me\game\dicehand\src\Dice\DiceHand.php
+--------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------
+ 30 | ERROR | [x] Function closing brace must go on the next line following the
+    |       |     body; found 1 blank lines before brace
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+
+FILE: ...win64\home\Korvin1337\dbwebb-kurser\mvc\me\game\dicehand\src\Dice\Game.php
+--------------------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+--------------------------------------------------------------------------------
+ 14 | ERROR | [ ] The class-based use imports must follow the namespace
+    |       |     declaration in the file header
+ 15 | ERROR | [x] Header blocks must be separated by a single blank line
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+Time: 3.31 secs; Memory: 6MB
+
