@@ -14,6 +14,8 @@ $graphicDice = "";
 
 <p><?= $message ?></p>
 
+<p> ----------------------------------------- </p>
+
 <?php
     $graphicDice .= $graphic[$graphicArray[0][0] - 1];
     $graphicDice .= $graphic[$graphicArray[0][3] - 1];
@@ -21,10 +23,25 @@ $graphicDice = "";
     $graphicDice .= $graphic[$graphicArray[0][9] - 1];
 ?>
 
-<p>Last roll:</p>
+<!DOCTYPE html>
+<html>
 
-<p><?= $graphic[$theLastRoll - 1]?></p>
+  <form action="" method="POST">
+      <input type="hidden" name="my_Faces" min="6" max="6" value="6">
+    <input type="submit" name="submit" value="Roll" class="btn"></button>
+  </form>
 
+</html>
+
+<?php
+
+if (isset($_POST['submit'])) {
+    $roller = rand (1, intval($_POST['my_Faces']));
+
+    echo "Spartacus Rolls: " . $graphic[$roller - 1] . "!";
+}
+?>
+<p> ----------------------------------------- </p>
 <p>Graphical Dice:</p>
 
 <p><?= $graphicDice ?> </p>

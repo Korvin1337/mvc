@@ -21,7 +21,7 @@ $message = $message ?? null;
   <form action="" method="POST">
       <label>Number of Faces:</label><br />
       <input type="number" name="my_Faces" min="1" value="1">
-    <input type="submit" name="submit" value="Submit" class="btn"></button>
+    <input type="submit" name="submit" value="Roll" class="btn"></button>
   </form>
 
 </html>

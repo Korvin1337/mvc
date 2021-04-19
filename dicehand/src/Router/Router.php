@@ -68,19 +68,25 @@ class Router
             $callable->playGame();
 
             return;
-        } else if ($method === "GET" && $path === "/dice?") {
+        } else if ($method === "GET" && $path === "/dicehand") {
 
-            $callable = new \Korvin1337\Dice\Game();
+            $callable = new \Korvin1337\DiceHand\Game();
             $callable->playGame();
 
             return;
-        } else if ($method === "POST" && $path === "/dice?") {
+        } else if ($method === "POST" && $path === "/dicehand") {
 
-            $callable = new \Korvin1337\Dice\Game();
+            $callable = new \Korvin1337\DiceHand\Game();
             $callable->playGame();
 
             return;
         } else if ($method === "GET" && $path === "/graphicaldice") {
+
+            $callable = new \Korvin1337\GraphicalDice\Game();
+            $callable->playGame();
+
+            return;
+        } else if ($method === "POST" && $path === "/graphicaldice") {
 
             $callable = new \Korvin1337\GraphicalDice\Game();
             $callable->playGame();
@@ -98,18 +104,6 @@ class Router
             $callable->playGame();
 
             return;
-        } else if ($method === "GET" && $path === "/game21?") {
-
-            $callable = new \Korvin1337\Game21\Game();
-            $callable->playGame();
-
-            return;
-        } else if ($method === "POST" && $path === "/game21?") {
-
-              $callable = new \Korvin1337\Game21\Game();
-              $callable->playGame();
-
-              return;
         }
         $data = [
             "header" => "404",
