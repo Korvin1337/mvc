@@ -2,31 +2,31 @@
 
 declare(strict_types=1);
 
-namespace Korvin1337\Dice;
+namespace Korvin1337\Game21;
 
 /**
- * Class DiceHand.
+ * Class Game21Hand.
  */
-class DiceHand
+class Game21Hand
 {
-    private array $dices;
+    private array $game21s;
     private int $sum;
 
     public function __construct()
     {
         for ($i = 0; $i <= 3; $i++) {
-            $this->dices[$i] = new Dice();
+            $this->game21s[$i] = new Game21();
         }
 
     }
 
     public function roll(): void
     {
-        $len = count($this->dices);
+        $len = count($this->game21s);
 
         $this->sum = 0;
         for ($i = 0; $i <= 3; $i++) {
-            $this->sum += $this->dices[$i]->roll();
+            $this->sum += $this->game21s[$i]->roll();
         }
     }
 
@@ -34,7 +34,7 @@ class DiceHand
     {
         $res = "";
         for ($i = 0; $i <= 3; $i++) {
-            $res .= $this->dices[$i]->getLastRoll() . ", ";
+            $res .= $this->game21s[$i]->getLastRoll() . ", ";
         }
 
         return $res . " = " . $this->sum;

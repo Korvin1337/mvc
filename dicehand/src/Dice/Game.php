@@ -24,8 +24,14 @@ class Game
     {
         $data = [
             "header" => "Dice",
-            "message" => "Hey!",
+            "message" => "Luck of the roll!",
         ];
+
+        function getFaces() {
+            $this->roll = rand (1, form);
+
+            return $this->roll;
+        }
 
         $die = new Dice();
         $die->roll();

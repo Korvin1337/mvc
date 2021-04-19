@@ -9,15 +9,29 @@ declare(strict_types=1);
 $header = $header ?? null;
 $message = $message ?? null;
 
-?><h1><?= $header ?></h1>
+?>
+
+<h1><?= $header ?></h1>
 
 <p><?= $message ?></p>
 
-<p>DICE!!!!</p>
+<!DOCTYPE html>
+<html>
 
-<p><?= $dieLastRoll ?></p>
+  <form action="" method="POST">
+      <label>Number of Faces:</label><br />
+      <input type="number" name="my_Faces" min="1" value="1">
+    <input type="submit" name="submit" value="Submit" class="btn"></button>
+  </form>
 
-<p>Dicehand</p>
+</html>
 
-<p><?= $diceHandRoll ?></p>
-<p><?= $diceHandRoll1 ?></p>
+<?php
+
+if (isset($_POST['submit'])) {
+    $roller = rand (1, intval($_POST['my_Faces']));
+
+    echo "Spartacus Rolls: " . $roller . "!";
+}
+
+?>

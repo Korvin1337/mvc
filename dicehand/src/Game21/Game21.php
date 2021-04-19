@@ -2,25 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Korvin1337\Dice;
+namespace Korvin1337\Game21;
 
 /**
- * Class Dice.
+ * Class Game.
  */
-class Dice
+class Game21
 {
     const FACES = 6;
+
+    private ?int $roll = null;
 
     public function roll(): int
     {
         $this->roll = rand (1, self::FACES);
-
-        return $this->roll;
-    }
-
-    public function postRoll($my_Faces): int
-    {
-        $this->roll = rand (1, self::my_Faces);
 
         return $this->roll;
     }

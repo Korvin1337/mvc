@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Source+Sans+Pro');
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    line-height: 1.4;
+}
+
+main {
+    padding: 1.4rem 0.6rem;
+}
+
+h1,
+h2,
+h4 {
+    margin-top: 0;
+    font-family: 'Merriweather', serif;
+}
+
+p {
+    margin-top: 0;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 1.4rem;
+    font-size: 1rem;
+}
+
+a {
+    margin-top: 0;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 1.4rem;
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 2.4rem;
+    margin-bottom: 2.8rem;
+}
+
+h2 {
+    font-size: 2.0rem;
+    margin-bottom: 1.4rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+}
+
+.title {
+    font-family: 'Merriweather', serif;
+    font-size: 2.4rem;
+    border-bottom: 1px solid #ccc;
+    margin-top: 0;
+    font-weight: bold;
+}
+
+.lagerSaldo {
+    font-family: 'Merriweather', serif;
+    font-size: 1.4rem;
+    margin-top: 0;
+    font-weight: bold;
+    text-decoration: underLine;
+}
+
+.container {
+    padding: 1rem;
+    margin-bottom: 3.2rem;
+}
+
+.container p {
+    line-height: 1.4;
+    font-size: 1rem;
+}
+
+.container a {
+    line-height: 1.4;
+    font-size: 1rem;
+}
+
+.container img {
+    width: 100%;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    background: white;
+    display: flex;
+    flex-flow: row || nowrap;
+    justify-content: space-evenly;
+}
+
+.bottom-nav a {
+    text-align: center;
+    color: #666;
+}
+
+.bottom-nav a.active {
+    color: #4e75ba;
+}
+
+.bottom-nav i {
+    display: block;
+}
+
+.bottom-nav span {
+    font-size: 0.7rem;
+}
+
+.hideMe {
+    display: none;
+}
+
+.displayMe {
+    display: block;
+}
+
+.btn {
+    cursor: pointer;
+    position: relative;
+    float: right;
+    left: -1rem;
+    top: 2rem;
+}
+
+/* Change the color of links on hover */
+#topnav a:hover {
+    color: black;
+}

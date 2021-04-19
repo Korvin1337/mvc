@@ -26,6 +26,7 @@ function getRoutePath(): string
 }
 
 
+
 /**
  * Render the view and return its rendered content.
  *

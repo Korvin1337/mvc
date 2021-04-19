@@ -56,61 +56,8 @@ class Router
             $body = renderView("layout/page.php", $data);
             sendResponse($body);
             return;
-        } else if ($method === "GET" && $path === "/dice") {
-
-            $callable = new \Korvin1337\Dice\Game();
-            $callable->playGame();
-
-            return;
-        } else if ($method === "POST" && $path === "/dice") {
-
-            $callable = new \Korvin1337\Dice\Game();
-            $callable->playGame();
-
-            return;
-        } else if ($method === "GET" && $path === "/dice?") {
-
-            $callable = new \Korvin1337\Dice\Game();
-            $callable->playGame();
-
-            return;
-        } else if ($method === "POST" && $path === "/dice?") {
-
-            $callable = new \Korvin1337\Dice\Game();
-            $callable->playGame();
-
-            return;
-        } else if ($method === "GET" && $path === "/graphicaldice") {
-
-            $callable = new \Korvin1337\GraphicalDice\Game();
-            $callable->playGame();
-
-            return;
-        } else if ($method === "GET" && $path === "/game21") {
-
-            $callable = new \Korvin1337\Game21\Game();
-            $callable->playGame();
-
-            return;
-        } else if ($method === "POST" && $path === "/game21") {
-
-            $callable = new \Korvin1337\Game21\Game();
-            $callable->playGame();
-
-            return;
-        } else if ($method === "GET" && $path === "/game21?") {
-
-            $callable = new \Korvin1337\Game21\Game();
-            $callable->playGame();
-
-            return;
-        } else if ($method === "POST" && $path === "/game21?") {
-
-              $callable = new \Korvin1337\Game21\Game();
-              $callable->playGame();
-
-              return;
         }
+
         $data = [
             "header" => "404",
             "message" => "The page you are requesting is not here. You may also checkout the HTTP response code, it should be 404.",

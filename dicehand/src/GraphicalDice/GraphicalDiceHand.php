@@ -2,31 +2,31 @@
 
 declare(strict_types=1);
 
-namespace Korvin1337\Dice;
+namespace Korvin1337\GraphicalDice;
 
 /**
- * Class DiceHand.
+ * Class GraphicalDiceHand.
  */
-class DiceHand
+class GraphicalDiceHand
 {
-    private array $dices;
+    private array $graphicaldices;
     private int $sum;
 
     public function __construct()
     {
         for ($i = 0; $i <= 3; $i++) {
-            $this->dices[$i] = new Dice();
+            $this->graphicaldices[$i] = new GraphicalDice();
         }
 
     }
 
     public function roll(): void
     {
-        $len = count($this->dices);
+        $len = count($this->graphicaldices);
 
         $this->sum = 0;
         for ($i = 0; $i <= 3; $i++) {
-            $this->sum += $this->dices[$i]->roll();
+            $this->sum += $this->graphicaldices[$i]->roll();
         }
     }
 
@@ -34,7 +34,7 @@ class DiceHand
     {
         $res = "";
         for ($i = 0; $i <= 3; $i++) {
-            $res .= $this->dices[$i]->getLastRoll() . ", ";
+            $res .= $this->graphicaldices[$i]->getLastRoll() . ", ";
         }
 
         return $res . " = " . $this->sum;
