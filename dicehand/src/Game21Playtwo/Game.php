@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Korvin1337\Game21;
+namespace Korvin1337\Game21PlayTwo;
 
 use function Mos\Functions\{
     redirectTo,
@@ -11,9 +11,8 @@ use function Mos\Functions\{
     url
 };
 
-use Korvin1337\Game21\Game21;
-use Korvin1337\Game21\Game21Hand;
-
+use Korvin1337\Game21PlayTwo\Game21Play;
+use Korvin1337\Game21PlayTwo\Game21PlayHand;
 
 /**
  * Class Game.
@@ -30,19 +29,19 @@ class Game
         $data["graphic"] = array('<img src="https://i.imgur.com/RDTSQhn.png"/>', '<img src="https://i.imgur.com/8wRidUj.png"/>', '<img src="https://i.imgur.com/YEHAYON.png"/>', '<img src="https://i.imgur.com/T9Xov4F.png"/>', '<img src="https://i.imgur.com/U7K9ZaX.png"/>', '<img src="https://i.imgur.com/8rv32gM.png"/>');
         $data["graphicArray"] = array();
 
-        $game21 = new Game21();
-        $game21->roll();
+        $game21play = new Game21Play();
+        $game21play->roll();
 
-        $game21Hand = new Game21Hand();
-        $game21Hand->roll();
+        $game21playHand = new Game21PlayHand();
+        $game21playHand->roll();
 
-        $data["game21LastRoll"] = $game21->getLastRoll();
-        $data["game21HandRoll"] = $game21Hand->getLastRoll();
-        $data["theLastRoll"] = $game21->getLastRoll();
+        $data["game21playLastRoll"] = $game21play->getLastRoll();
+        $data["game21playHandRoll"] = $game21playHand->getLastRoll();
+        $data["theLastRoll"] = $game21play->getLastRoll();
 
-        array_push($data["graphicArray"], $game21Hand->getLastRoll());
+        array_push($data["graphicArray"], $game21playHand->getLastRoll());
 
-        $body = renderView("layout/game21.php", $data);
+        $body = renderView("layout/game21playtwo.php", $data);
         sendResponse($body);
     }
 }

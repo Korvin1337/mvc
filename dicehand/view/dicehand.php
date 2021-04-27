@@ -25,8 +25,8 @@ $graphicDice .= $graphic[$graphicArray[0][9] - 1];
 <html>
 
   <form action="" method="POST">
-      <label>Number of Dices: (1-1000)</label><br />
-      <input type="number" name="my_Dices" min="1" max="1000" value="1">
+      <label>Number of Dices: (1-10000)</label><br />
+      <input type="number" name="my_Dices" min="1" max="10000" value="1">
     <input type="submit" name="submit" value="Roll" class="btn"></button>
   </form>
 
@@ -37,14 +37,13 @@ $graphicDice .= $graphic[$graphicArray[0][9] - 1];
 if (isset($_POST['submit'])) {
     $diceArray = array();
 
-    for ($i = 1; $i < $_POST['my_Dices']; $i++) {
+    for ($i = 1; $i <= $_POST['my_Dices'] + 1; $i++) {
         $roller = rand (1, 6);
         array_push($diceArray, $roller);
     }
 
     for ($i = 1; $i < count($diceArray); $i++) {
-        echo "Spartacus Rolls: " . $graphic[$diceArray[$i] - 1] . "!";
-        echo "<br>";
+        echo $graphic[$diceArray[$i] - 1];
     }
 }
 

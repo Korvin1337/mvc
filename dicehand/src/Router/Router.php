@@ -104,6 +104,30 @@ class Router
             $callable->playGame();
 
             return;
+        } else if ($method === "POST" && $path === "/game21playone") {
+
+            $callable = new \Korvin1337\Game21PlayOne\Game();
+            $callable->playGame();
+
+            return;
+        } else if ($method === "GET" && $path === "/game21playone") {
+
+            $callable = new \Korvin1337\Game21PlayOne\Game();
+            $callable->playGame();
+
+            return;
+        }else if ($method === "POST" && $path === "/game21playtwo") {
+
+            $callable = new \Korvin1337\Game21PlayTwo\Game();
+            $callable->playGame();
+
+            return;
+        } else if ($method === "GET" && $path === "/game21playtwo") {
+
+            $callable = new \Korvin1337\Game21PlayTwo\Game();
+            $callable->playGame();
+
+            return;
         }
         $data = [
             "header" => "404",
